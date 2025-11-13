@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import Link from 'next/link';
 
 export default function DashboardPage() {
   const [selectedMethod, setSelectedMethod] = useState<string | null>(null);
@@ -85,14 +86,18 @@ export default function DashboardPage() {
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <Button variant="outline" size="sm">
-                <span className="mr-2">⚙️</span>
-                Settings
-              </Button>
-              <Button variant="outline" size="sm">
-                <span className="mr-2">📚</span>
-                History
-              </Button>
+              <Link href="/method-config">
+                <Button variant="outline" size="sm">
+                  <span className="mr-2">⚙️</span>
+                  方法配置
+                </Button>
+              </Link>
+              <Link href="/setup">
+                <Button variant="outline" size="sm">
+                  <span className="mr-2">🔧</span>
+                  基础设置
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -62,6 +62,23 @@ export default function SetupPage() {
         { id: 'deepseek-reasoner', name: 'deepseek-reasoner', description: 'For more complex tasks, more expensive but cheaper than reasoning models of other providers' },
       ]
     },
+    {
+      id: 'openrouter',
+      name: 'OpenRouter',
+      icon: '🌐',
+      description: 'Access to multiple AI models from different providers through a single API. Great for flexibility and testing different models',
+      apiKeyUrl: 'https://openrouter.ai/keys',
+      models: [
+        { id: 'openai/gpt-4-turbo', name: 'GPT-4 Turbo', description: 'OpenAI\'s most capable model' },
+        { id: 'anthropic/claude-3.5-sonnet', name: 'Claude 3.5 Sonnet', description: 'Anthropic\'s latest and most intelligent model' },
+        { id: 'anthropic/claude-3-opus', name: 'Claude 3 Opus', description: 'Best for complex tasks' },
+        { id: 'anthropic/claude-3-sonnet', name: 'Claude 3 Sonnet', description: 'Balanced performance' },
+        { id: 'anthropic/claude-3-haiku', name: 'Claude 3 Haiku', description: 'Fast and cost-effective' },
+        { id: 'google/gemini-pro-1.5', name: 'Gemini Pro 1.5', description: 'Google\'s advanced model' },
+        { id: 'meta-llama/llama-3.1-70b-instruct', name: 'Llama 3.1 70B', description: 'Meta\'s powerful open model' },
+        { id: 'mistralai/mixtral-8x7b-instruct', name: 'Mixtral 8x7B', description: 'Mistral\'s mixture of experts' },
+      ]
+    },
   ];
 
   const handleContinue = async () => {

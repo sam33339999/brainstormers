@@ -33,6 +33,27 @@ export const LLM_PROVIDERS: Record<string, LLMProvider> = {
     icon: '🧠',
     requiresApiKey: true,
   },
+  openrouter: {
+    id: 'openrouter',
+    name: 'OpenRouter',
+    baseURL: 'https://openrouter.ai/api/v1',
+    models: [
+      'openai/gpt-4-turbo',
+      'openai/gpt-4',
+      'openai/gpt-3.5-turbo',
+      'anthropic/claude-3.5-sonnet',
+      'anthropic/claude-3-opus',
+      'anthropic/claude-3-sonnet',
+      'anthropic/claude-3-haiku',
+      'google/gemini-pro-1.5',
+      'meta-llama/llama-3.1-70b-instruct',
+      'meta-llama/llama-3.1-8b-instruct',
+      'mistralai/mixtral-8x7b-instruct',
+      'deepseek/deepseek-chat',
+    ],
+    icon: '🌐',
+    requiresApiKey: true,
+  },
 };
 
 export const DEFAULT_PROVIDER = 'openai';
@@ -62,6 +83,7 @@ export function validateApiKey(apiKey: string, providerId: string): boolean {
     groq: /^gsk_[a-zA-Z0-9]{52}$/,
     gemini: /^[a-zA-Z0-9_-]{39}$/,
     deepseek: /^sk-[a-zA-Z0-9]{48,}$/,
+    openrouter: /^sk-or-v1-[a-zA-Z0-9]{64,}$/,
   };
 
   const pattern = patterns[providerId];
@@ -79,6 +101,7 @@ export function getProviderInstructions(providerId: string): string {
     groq: 'Get your API key from https://console.groq.com/keys',
     gemini: 'Get your API key from https://makersuite.google.com/app/apikey',
     deepseek: 'Get your API key from https://platform.deepseek.com/api_keys',
+    openrouter: 'Get your API key from https://openrouter.ai/keys',
   };
 
   return instructions[providerId] || 'Check the provider\'s documentation for API key instructions.';

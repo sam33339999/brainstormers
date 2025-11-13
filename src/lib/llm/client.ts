@@ -33,6 +33,24 @@ export class BrainstormClient {
       throw new Error('Client not initialized');
     }
 
+    // 检查是否为该方法配置了特定的模型
+    const methodConfig = this.settings.methodModels?.[request.method];
+    let clientToUse = this.client;
+    let modelToUse = this.settings.selectedModel;
+
+    if (methodConfig) {
+      // 如果该方法有特定配置，创建专用客户端
+      const provider = getProvider(methodConfig.provider);
+      if (provider) {
+        clientToUse = new OpenAI({
+          apiKey: this.settings.apiKey,
+          baseURL: provider.baseURL,
+          dangerouslyAllowBrowser: true,
+        });
+        modelToUse = methodConfig.model;
+      }
+    }
+
     try {
       const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [
         {
@@ -63,8 +81,8 @@ export class BrainstormClient {
         content: prompt
       });
       
-      const completion = await this.client.chat.completions.create({
-        model: this.settings.selectedModel,
+      const completion = await clientToUse.chat.completions.create({
+        model: modelToUse,
         messages,
         temperature: 0.8,
         max_tokens: 2000,

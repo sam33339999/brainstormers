@@ -49,6 +49,11 @@ export interface LLMProvider {
   requiresApiKey: boolean;
 }
 
+export interface MethodModelConfig {
+  provider: string;
+  model: string;
+}
+
 export interface UserSettings {
   apiKey: string;
   selectedProvider: string;
@@ -56,6 +61,7 @@ export interface UserSettings {
   theme: 'light' | 'dark' | 'system';
   streamingEnabled: boolean;
   autoSave: boolean;
+  methodModels?: Record<string, MethodModelConfig>; // 每个方法的模型配置
 }
 
 export interface BrainstormRequest {

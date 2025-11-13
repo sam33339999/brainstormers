@@ -18,48 +18,65 @@ export default function SetupPage() {
       id: 'openai',
       name: 'OpenAI',
       icon: '🤖',
-      description: 'The go-to LLM provider, first in the market with strong models',
+      description: '市場領先的 LLM 提供商，擁有強大的模型',
       apiKeyUrl: 'https://platform.openai.com/settings/organization/api-keys',
       models: [
-        { id: 'o4-mini', name: 'o4-mini', description: 'Perfect for complex queries and long thinking, but expensive, but cheap reasoning model compared to others' },
-        { id: 'gpt-4o', name: 'gpt-4o', description: 'Globally good, good for complex thinking' },
-        { id: 'gpt-4o-mini', name: 'gpt-4o-mini', description: 'Fast, cheap and good' },
-        { id: 'gpt-4.1-nano', name: 'gpt-4.1-nano', description: 'Cheapest and fastest, best for easiest use cases and very fast sessions' },
+        { id: 'o4-mini', name: 'o4-mini', description: '適合複雜查詢和長時間思考，雖然較貴但相對其他推理模型便宜' },
+        { id: 'gpt-4o', name: 'gpt-4o', description: '整體優秀，適合複雜思考' },
+        { id: 'gpt-4o-mini', name: 'gpt-4o-mini', description: '快速、便宜且優秀' },
+        { id: 'gpt-4.1-nano', name: 'gpt-4.1-nano', description: '最便宜且最快，適合簡單用例和快速會話' },
       ]
     },
     {
       id: 'groq',
       name: 'Groq',
       icon: '⚡',
-      description: 'The fastest provider in the world, has a lot of open source models hosted in their infra and are the best and fastest really',
+      description: '全球最快的提供商，託管大量開源模型，速度最快且表現最佳',
       apiKeyUrl: 'https://console.groq.com/keys',
       models: [
-        { id: 'qwen2.5-32b-instruct', name: 'qwen2.5-32b-instruct', description: 'Good reasoning model strong and yet cheap' },
-        { id: 'llama-3.3-70b-versatile', name: 'llama-3.3-70b-versatile', description: 'Latest meta model, cheap, good reasoning, mixture of experts' },
-        { id: 'deepseek-r1-distill-llama-70b', name: 'deepseek-r1-distill-llama-70b', description: 'Globally good, good reasoning, expensive, complex' },
+        { id: 'qwen2.5-32b-instruct', name: 'qwen2.5-32b-instruct', description: '優秀的推理模型，強大且便宜' },
+        { id: 'llama-3.3-70b-versatile', name: 'llama-3.3-70b-versatile', description: '最新 Meta 模型，便宜、推理能力好、專家混合' },
+        { id: 'deepseek-r1-distill-llama-70b', name: 'deepseek-r1-distill-llama-70b', description: '整體優秀，推理能力好，較貴且複雜' },
       ]
     },
     {
       id: 'gemini',
       name: 'Google Gemini',
       icon: '🔮',
-      description: 'Good globally good models that have a lot of knowledge and that have a very big context window making brainstorming sessions very long and can think of toooo much things in same time',
+      description: '擁有豐富知識的優秀模型，超大上下文視窗讓腦力激盪會話更長，能同時思考更多事情',
       apiKeyUrl: 'https://aistudio.google.com/app/apikey',
       models: [
-        { id: 'gemini-2.0-flash-exp', name: 'Gemini 2.0 Flash', description: 'Enhanced thinking and reasoning, multimodal understanding, advanced coding, and more' },
-        { id: 'gemini-1.5-flash', name: 'Gemini 1.5 Flash', description: 'Adaptive thinking, cost efficiency' },
-        { id: 'gemini-1.5-flash-8b', name: 'Gemini 1.5 Flash-8B', description: 'Most cost-efficient model supporting high throughput' },
+        { id: 'gemini-2.0-flash-exp', name: 'Gemini 2.0 Flash', description: '增強思考和推理、多模態理解、進階編碼等' },
+        { id: 'gemini-1.5-flash', name: 'Gemini 1.5 Flash', description: '適應性思考、成本效益' },
+        { id: 'gemini-1.5-flash-8b', name: 'Gemini 1.5 Flash-8B', description: '最具成本效益的模型，支援高吞吐量' },
       ]
     },
     {
       id: 'deepseek',
       name: 'DeepSeek',
       icon: '🧠',
-      description: 'A very very good LLM provider and yet is veeeery cheap the cheapest of them all so if you want efficiency in your budget chose this LLM provider it is really perfect',
+      description: '非常優秀的 LLM 提供商，而且超級便宜，是所有提供商中最便宜的，如果你想在預算上追求效率，選擇這個 LLM 提供商真的很完美',
       apiKeyUrl: 'https://platform.deepseek.com/api_keys',
       models: [
-        { id: 'deepseek-chat', name: 'deepseek-chat', description: 'Cheap and good globally' },
-        { id: 'deepseek-reasoner', name: 'deepseek-reasoner', description: 'For more complex tasks, more expensive but cheaper than reasoning models of other providers' },
+        { id: 'deepseek-chat', name: 'deepseek-chat', description: '便宜且整體優秀' },
+        { id: 'deepseek-reasoner', name: 'deepseek-reasoner', description: '適合更複雜的任務，較貴但比其他提供商的推理模型便宜' },
+      ]
+    },
+    {
+      id: 'openrouter',
+      name: 'OpenRouter',
+      icon: '🌐',
+      description: '透過單一 API 存取來自不同提供商的多個 AI 模型，非常適合靈活性和測試不同模型',
+      apiKeyUrl: 'https://openrouter.ai/keys',
+      models: [
+        { id: 'openai/gpt-4-turbo', name: 'GPT-4 Turbo', description: 'OpenAI 最強大的模型' },
+        { id: 'anthropic/claude-3.5-sonnet', name: 'Claude 3.5 Sonnet', description: 'Anthropic 最新且最智能的模型' },
+        { id: 'anthropic/claude-3-opus', name: 'Claude 3 Opus', description: '最適合複雜任務' },
+        { id: 'anthropic/claude-3-sonnet', name: 'Claude 3 Sonnet', description: '平衡的性能' },
+        { id: 'anthropic/claude-3-haiku', name: 'Claude 3 Haiku', description: '快速且經濟實惠' },
+        { id: 'google/gemini-pro-1.5', name: 'Gemini Pro 1.5', description: 'Google 的進階模型' },
+        { id: 'meta-llama/llama-3.1-70b-instruct', name: 'Llama 3.1 70B', description: 'Meta 的強大開源模型' },
+        { id: 'mistralai/mixtral-8x7b-instruct', name: 'Mixtral 8x7B', description: 'Mistral 的專家混合模型' },
       ]
     },
   ];
@@ -111,9 +128,9 @@ export default function SetupPage() {
           <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
             <span className="text-2xl">🚀</span>
           </div>
-          <h1 className="text-3xl font-bold mb-2">Welcome to Brainstormers</h1>
+          <h1 className="text-3xl font-bold mb-2">歡迎使用 Brainstormers</h1>
           <p className="text-slate-600 dark:text-slate-300">
-            Let&apos;s get you set up with your preferred AI provider
+            讓我們設定您偏好的 AI 提供商
           </p>
         </div>
 
@@ -122,14 +139,14 @@ export default function SetupPage() {
           <div className="flex items-start space-x-4">
             <span className="text-3xl">💡</span>
             <div className="space-y-3">
-              <h2 className="text-xl font-semibold text-blue-900 dark:text-blue-100">About This Open Source Project</h2>
+              <h2 className="text-xl font-semibold text-blue-900 dark:text-blue-100">關於此開源專案</h2>
               <p className="text-blue-800 dark:text-blue-200 leading-relaxed">
-                This is mainly an open source project and I don&apos;t have the money to make it a full product, so I don&apos;t have the money to pay for LLM providers.
-                But you can enjoy the product if you provide the LLM provider that you want!
+                這主要是一個開源專案，我沒有資金將其做成完整產品，所以無法支付 LLM 提供商的費用。
+                但您可以透過提供自己想要的 LLM 提供商來享受此產品！
               </p>
               <p className="text-blue-800 dark:text-blue-200 leading-relaxed">
-                This is actually a <strong>great idea</strong> because when you provide your own LLM provider, you are free to use any LLM from anywhere in the world as you want.
-                So for now, the product uses the following providers that you can choose from:
+                這實際上是一個<strong>絕佳的主意</strong>，因為當您提供自己的 LLM 提供商時，您可以自由使用世界各地的任何 LLM。
+                所以目前產品使用以下您可以選擇的提供商：
               </p>
             </div>
           </div>
@@ -139,7 +156,7 @@ export default function SetupPage() {
           <div className="space-y-8">
             {/* Provider Selection */}
             <div>
-              <label className="block text-lg font-semibold mb-4">Choose Your AI Provider</label>
+              <label className="block text-lg font-semibold mb-4">選擇您的 AI 提供商</label>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {providers.map((provider) => (
                   <div
@@ -172,7 +189,7 @@ export default function SetupPage() {
             {/* Model Selection */}
             {selectedProvider && (
               <div className="space-y-4">
-                <label className="block text-lg font-semibold">Choose a Model</label>
+                <label className="block text-lg font-semibold">選擇模型</label>
                 <div className="grid grid-cols-1 gap-3">
                   {getSelectedProvider()?.models.map((model) => (
                     <div
@@ -202,10 +219,10 @@ export default function SetupPage() {
                 
                 {/* Custom Model Input */}
                 <div className="space-y-2">
-                  <label className="block text-sm font-medium">Or use a custom model</label>
+                  <label className="block text-sm font-medium">或使用自訂模型</label>
                   <Input
                     type="text"
-                    placeholder="Enter exact model name (e.g., gpt-4.1-nano-preview)"
+                    placeholder="輸入精確的模型名稱（例如：gpt-4.1-nano-preview）"
                     value={customModel}
                     onChange={(e) => {
                       setCustomModel(e.target.value);
@@ -216,7 +233,7 @@ export default function SetupPage() {
                     className="font-mono"
                   />
                   <div className="text-xs text-slate-500">
-                    Make sure to enter the exact model name as specified by the provider
+                    請確保輸入提供商指定的精確模型名稱
                   </div>
                 </div>
               </div>
@@ -225,16 +242,16 @@ export default function SetupPage() {
             {/* API Key Input */}
             {selectedProvider && (
               <div className="space-y-3">
-                <label className="block text-lg font-semibold">API Key</label>
+                <label className="block text-lg font-semibold">API 金鑰</label>
                 <Input
                   type="password"
-                  placeholder="Enter your API key..."
+                  placeholder="輸入您的 API 金鑰..."
                   value={apiKey}
                   onChange={(e) => setApiKey(e.target.value)}
                   className="font-mono"
                 />
                 <div className="text-sm text-slate-600 dark:text-slate-400">
-                  <span>Get your API key here: </span>
+                  <span>在此獲取您的 API 金鑰： </span>
                   <Link
                     href={getSelectedProvider()?.apiKeyUrl || '#'}
                     target="_blank"
@@ -251,19 +268,19 @@ export default function SetupPage() {
               <div className="flex items-start space-x-3">
                 <span className="text-green-600 text-xl">🔒</span>
                 <div className="space-y-2">
-                  <h3 className="font-medium text-green-800 dark:text-green-200">Your Security is Our Priority</h3>
+                  <h3 className="font-medium text-green-800 dark:text-green-200">您的安全是我們的首要任務</h3>
                   <ul className="text-sm text-green-700 dark:text-green-300 space-y-1">
-                    <li>✓ Your API key is stored securely in your browser</li>
-                    <li>✓ No data is sent to our servers - everything runs client-side</li>
-                    <li>✓ View our open-source code on GitHub</li>
-                    <li>✓ You can revoke your key anytime</li>
+                    <li>✓ 您的 API 金鑰安全地儲存在您的瀏覽器中</li>
+                    <li>✓ 沒有資料傳送到我們的伺服器 - 一切都在客戶端運行</li>
+                    <li>✓ 在 GitHub 上查看我們的開源代碼</li>
+                    <li>✓ 您可以隨時撤銷您的金鑰</li>
                   </ul>
                   <div className="pt-2">
                       <Button variant="outline" size="sm" className="text-green-700 border-green-300 hover:bg-green-100">
                         <Link href="https://github.com/Azzedde/brainstormers" target="_blank">
 
                         <span className="mr-2">📖</span>
-                        View Source Code
+                        查看原始碼
                       </Link>
                       </Button>
                   </div>
@@ -275,7 +292,7 @@ export default function SetupPage() {
             <div className="flex space-x-3">
               <Link href="/" className="flex-1">
                 <Button variant="outline" className="w-full">
-                  Back
+                  返回
                 </Button>
               </Link>
               <Button
@@ -286,12 +303,12 @@ export default function SetupPage() {
                 {isValidating ? (
                   <>
                     <span className="mr-2">⏳</span>
-                    Validating...
+                    驗證中...
                   </>
                 ) : (
                   <>
                     <span className="mr-2">✨</span>
-                    Continue Securely
+                    安全繼續
                   </>
                 )}
               </Button>

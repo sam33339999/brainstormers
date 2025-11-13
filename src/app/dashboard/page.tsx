@@ -11,57 +11,57 @@ export default function DashboardPage() {
   const methods = [
     {
       id: 'big-mind-mapping',
-      name: 'Big Mind Mapping',
+      name: '大心智圖',
       icon: '🗺️',
-      description: 'Explore ideas across a wide scope to gather the maximum number of creative solutions.',
-      whenToUse: 'Perfect when you are lost and want to gather the maximum number of ideas',
+      description: '在廣泛的範圍內探索想法，以收集最多的創意解決方案。',
+      whenToUse: '當您迷失方向並想要收集最多想法時的完美選擇',
       gradient: 'from-blue-500 to-cyan-500',
-      examples: ['Product features brainstorming', 'Business model exploration', 'Content idea generation']
+      examples: ['產品功能腦力激盪', '商業模式探索', '內容創意生成']
     },
     {
       id: 'reverse-brainstorming',
-      name: 'Reverse Brainstorming',
+      name: '反向腦力激盪',
       icon: '🔄',
-      description: 'Identify ways to cause problems to reveal potential issues and innovative solutions.',
-      whenToUse: 'Great for spotting potential issues and coming up with innovative solutions',
+      description: '找出造成問題的方式，以揭示潛在問題和創新解決方案。',
+      whenToUse: '非常適合發現潛在問題並提出創新解決方案',
       gradient: 'from-purple-500 to-pink-500',
-      examples: ['Improving customer retention', 'Identifying security vulnerabilities', 'Preventing project failures']
+      examples: ['改善客戶保留率', '識別安全漏洞', '預防專案失敗']
     },
     {
       id: 'role-storming',
-      name: 'Role Storming',
+      name: '角色扮演',
       icon: '🎭',
-      description: 'Adopt different perspectives to generate diverse insights and creative solutions.',
-      whenToUse: 'Excellent for gathering insights from different viewpoints and stakeholders',
+      description: '採用不同視角來產生多元見解和創意解決方案。',
+      whenToUse: '非常適合從不同觀點和利害關係人那裡收集見解',
       gradient: 'from-green-500 to-teal-500',
-      examples: ['User experience design', 'Stakeholder problem solving', 'Inclusive solution creation']
+      examples: ['使用者體驗設計', '利害關係人問題解決', '包容性解決方案創建']
     },
     {
       id: 'scamper',
       name: 'SCAMPER',
       icon: '🔧',
-      description: 'Transform ideas systematically using Substitute, Combine, Adapt, Modify, Put to other use, Eliminate, Reverse.',
-      whenToUse: 'Ideal for improving existing ideas or products through systematic transformation',
+      description: '使用替代、組合、調整、修改、挪作他用、消除、反轉系統性地轉換想法。',
+      whenToUse: '非常適合透過系統化轉換來改善現有想法或產品',
       gradient: 'from-orange-500 to-red-500',
-      examples: ['Product improvement', 'Process innovation', 'Resource optimization']
+      examples: ['產品改良', '流程創新', '資源優化']
     },
     {
       id: 'six-thinking-hats',
-      name: 'Six Thinking Hats',
+      name: '六頂思考帽',
       icon: '🎩',
-      description: 'Examine problems from six perspectives: Data, Emotions, Risks, Benefits, Creativity, and Process.',
-      whenToUse: 'Perfect for comprehensive analysis and balanced decision-making',
+      description: '從六個角度檢視問題：資料、情感、風險、好處、創意和流程。',
+      whenToUse: '非常適合全面分析和平衡決策',
       gradient: 'from-indigo-500 to-purple-500',
-      examples: ['Business decisions', 'Project evaluation', 'Complex problem analysis']
+      examples: ['商業決策', '專案評估', '複雜問題分析']
     },
     {
       id: 'starbursting',
-      name: 'Starbursting',
+      name: '星爆法',
       icon: '⭐',
-      description: 'Generate comprehensive questions using Who, What, Where, When, Why, and How for thorough exploration.',
-      whenToUse: 'Excellent for comprehensive topic exploration and understanding requirements',
+      description: '使用 5W1H（誰、什麼、哪裡、何時、為何、如何）產生全面的問題，進行徹底探索。',
+      whenToUse: '非常適合全面探索主題和理解需求',
       gradient: 'from-yellow-500 to-orange-500',
-      examples: ['Project planning', 'Customer research', 'Market exploration']
+      examples: ['專案規劃', '客戶研究', '市場探索']
     }
   ];
 
@@ -82,7 +82,7 @@ export default function DashboardPage() {
               </div>
               <div>
                 <h1 className="text-xl font-bold">Brainstormers</h1>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Choose your brainstorming method</p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">選擇您的腦力激盪方法</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -107,10 +107,10 @@ export default function DashboardPage() {
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-4">
-            Choose Your <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Brainstorming Method</span>
+            選擇您的<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">腦力激盪方法</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Each method is designed for specific creative challenges. Select the one that best fits your current needs.
+            每種方法都是為特定的創意挑戰而設計。選擇最適合您當前需求的方法。
           </p>
         </div>
 
@@ -142,13 +142,13 @@ export default function DashboardPage() {
 
                 {/* When to Use */}
                 <div className="mb-4">
-                  <div className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-1">When to Use</div>
+                  <div className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-1">適用時機</div>
                   <p className="text-sm text-slate-700 dark:text-slate-300">{method.whenToUse}</p>
                 </div>
 
                 {/* Examples */}
                 <div className="mb-4">
-                  <div className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-2">Examples</div>
+                  <div className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-2">範例</div>
                   <div className="flex flex-wrap gap-1">
                     {method.examples.map((example, index) => (
                       <span
@@ -170,7 +170,7 @@ export default function DashboardPage() {
                   className={`w-full bg-gradient-to-r ${method.gradient} text-white hover:opacity-90 transition-opacity`}
                 >
                   <span className="mr-2">✨</span>
-                  Start {method.name}
+                  開始 {method.name}
                 </Button>
               </div>
             </Card>
@@ -181,21 +181,21 @@ export default function DashboardPage() {
         <Card className="p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border-blue-200 dark:border-blue-800">
           <div className="text-center">
             <div className="text-3xl mb-4">🚀</div>
-            <h3 className="text-xl font-semibold mb-2">Not sure which method to choose?</h3>
+            <h3 className="text-xl font-semibold mb-2">不確定要選擇哪種方法？</h3>
             <p className="text-slate-600 dark:text-slate-300 mb-4">
-              Try our quick recommendation based on your specific challenge or start with Big Mind Mapping for general exploration.
+              根據您的特定挑戰嘗試我們的快速建議，或從大心智圖開始進行一般探索。
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="outline">
                 <span className="mr-2">🎯</span>
-                Get Recommendation
+                獲取建議
               </Button>
               <Button
                 onClick={() => handleStartBrainstorming('big-mind-mapping')}
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90"
               >
                 <span className="mr-2">🗺️</span>
-                Start with Big Mind Mapping
+                從大心智圖開始
               </Button>
             </div>
           </div>

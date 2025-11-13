@@ -76,8 +76,8 @@ function ChatContent() {
         id: `welcome-${Date.now()}`,
         role: 'assistant',
         content: isBrainstormMode
-          ? `Welcome! I'm ready to help you with **${currentMethodData.name}** brainstorming.\n\n${currentMethodData.description}\n\n**When to use:** ${currentMethodData.whenToUse}\n\nWhat would you like to brainstorm about?`
-          : `Hello! I'm here to help answer your questions and have a conversation. What would you like to talk about?`,
+          ? `歡迎！我準備好協助您進行 **${currentMethodData.name}** 腦力激盪。\n\n${currentMethodData.description}\n\n**適用時機：** ${currentMethodData.whenToUse}\n\n您想要進行什麼主題的腦力激盪？`
+          : `您好！我在這裡幫助回答您的問題並進行對話。您想談論什麼？`,
         timestamp: new Date()
       };
       setMessages([welcomeMessage]);
@@ -135,7 +135,7 @@ function ChatContent() {
       const errorMessage: ChatMessage = {
         id: `error-${Date.now()}`,
         role: 'assistant',
-        content: 'Sorry, I encountered an error. Please try again.',
+        content: '抱歉，我遇到了錯誤。請再試一次。',
         timestamp: new Date()
       };
       setMessages(prev => [...prev, errorMessage]);
@@ -168,8 +168,8 @@ function ChatContent() {
       id: `welcome-${Date.now()}`,
       role: 'assistant',
       content: isBrainstormMode
-        ? `Welcome! I'm ready to help you with **${currentMethodData.name}** brainstorming.\n\n${currentMethodData.description}\n\n**When to use:** ${currentMethodData.whenToUse}\n\nWhat would you like to brainstorm about?`
-        : `Hello! I'm here to help answer your questions and have a conversation. What would you like to talk about?`,
+        ? `歡迎！我準備好協助您進行 **${currentMethodData.name}** 腦力激盪。\n\n${currentMethodData.description}\n\n**適用時機：** ${currentMethodData.whenToUse}\n\n您想要進行什麼主題的腦力激盪？`
+        : `您好！我在這裡幫助回答您的問題並進行對話。您想談論什麼？`,
       timestamp: new Date()
     };
     setMessages([welcomeMessage]);
@@ -187,7 +187,7 @@ function ChatContent() {
       }
       
       // Generate summary using the chat method with a specific prompt
-      const summaryPrompt = `Please provide a comprehensive summary of the following ${isBrainstormMode ? 'brainstorming session' : 'conversation'}:\n\n${messages.map(m => `${m.role}: ${m.content}`).join('\n\n')}\n\nProvide a clear, structured summary highlighting the key points, ideas, and conclusions.`;
+      const summaryPrompt = `請為以下${isBrainstormMode ? '腦力激盪會話' : '對話'}提供全面的摘要：\n\n${messages.map(m => `${m.role}: ${m.content}`).join('\n\n')}\n\n請提供清晰、結構化的摘要，重點突出關鍵點、想法和結論。`;
       
       const summaryResponse = await client.chat(summaryPrompt);
       setSummary(summaryResponse);
@@ -279,7 +279,7 @@ function ChatContent() {
               {/* Beautiful Toggle Switch */}
               <div className="flex items-center space-x-3">
                 <span className={`text-sm font-medium transition-colors ${!isBrainstormMode ? 'text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`}>
-                  💬 Chat
+                  💬 聊天
                 </span>
                 <button
                   onClick={toggleMode}
@@ -294,7 +294,7 @@ function ChatContent() {
                   />
                 </button>
                 <span className={`text-sm font-medium transition-colors ${isBrainstormMode ? 'text-pink-600 dark:text-pink-400' : 'text-slate-500 dark:text-slate-400'}`}>
-                  🧠 Brainstorm
+                  🧠 腦力激盪
                 </span>
               </div>
               
@@ -366,7 +366,7 @@ function ChatContent() {
                 size="sm"
                 className="text-red-600 border-red-300 hover:bg-red-50 hover:border-red-400 dark:text-red-400 dark:border-red-600 dark:hover:bg-red-900/20"
               >
-                🗑️ Clear Chat
+                🗑️ 清除聊天
               </Button>
               <Button
                 onClick={generateSummary}
@@ -374,7 +374,7 @@ function ChatContent() {
                 size="sm"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
               >
-                {isGeneratingSummary ? 'Generating...' : 'Generate Summary'}
+                {isGeneratingSummary ? '生成中...' : '生成摘要'}
               </Button>
             </div>
           </div>
@@ -387,7 +387,7 @@ function ChatContent() {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder={isBrainstormMode ? "Share your ideas..." : "Ask me anything..."}
+                placeholder={isBrainstormMode ? "分享您的想法..." : "問我任何問題..."}
                 className="flex-1 min-h-[60px] max-h-[200px] resize-none"
                 disabled={isLoading}
               />
@@ -396,7 +396,7 @@ function ChatContent() {
                 disabled={!inputValue.trim() || isLoading}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8"
               >
-                Send
+                發送
               </Button>
             </div>
           </form>
@@ -419,7 +419,7 @@ export default function ChatPage() {
   return (
     <Suspense fallback={
       <div className="flex items-center justify-center h-screen">
-        <div className="text-lg">Loading...</div>
+        <div className="text-lg">載入中...</div>
       </div>
     }>
       <ChatContent />

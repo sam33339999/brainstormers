@@ -86,7 +86,7 @@ export default function MethodConfigPage() {
   if (!settings) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <div className="text-lg">Loading...</div>
+        <div className="text-lg">載入中...</div>
       </div>
     );
   }
@@ -150,7 +150,7 @@ export default function MethodConfigPage() {
                       onClick={() => handleRemoveConfig(method.id)}
                       className="text-red-600 border-red-300 hover:bg-red-50"
                     >
-                      🗑️ 移除配置
+                      🗑️ 移除設定
                     </Button>
                   )}
                 </div>
@@ -160,7 +160,7 @@ export default function MethodConfigPage() {
                     {/* Provider Selection */}
                     <div>
                       <label className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300">
-                        提供商
+                        AI 提供商
                       </label>
                       <select
                         value={config.provider}
@@ -229,7 +229,7 @@ export default function MethodConfigPage() {
             disabled={isSaving}
             className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-90"
           >
-            {isSaving ? '保存中...' : '💾 保存配置'}
+            {isSaving ? '儲存中...' : '💾 儲存設定'}
           </Button>
         </div>
       </div>
